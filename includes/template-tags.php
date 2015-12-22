@@ -77,14 +77,14 @@ function _tk_comment( $comment, $args, $depth ) {
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body media">
-			<a class="pull-left" href="#">
-				<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-			</a>
 
 			<div class="media-body">
 				<div class="media-body-wrap panel panel-default">
 
 					<div class="panel-heading">
+			<a class="pull-left" href="#">
+				<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+			</a>
 						<h5 class="media-heading"><?php printf( __( '%s <span class="says">says:</span>', '_tk' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
 						<div class="comment-meta">
 							<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">

@@ -1,10 +1,10 @@
 /*
-Theme Name: _tk
-Theme URI: http://themekraft.com/store/_tk-free-wordpress-starter-theme-based-on-twitter-bootstrap/
-Author: ThemeKraft
-Author URI: http://themekraft.com/
-Description: Hi, I am the ultra minimal starter theme _tk, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress. You can find me on GitHub. Fork me! I'm waiting for you ;)
-Version: 1.1.10
+Theme Name: _tkFC
+Theme URI: https://github.com/Finn10111/_tkfc
+Author: Finn Christiansen
+Author URI: https://www.finnchristiansen.de
+Description: This theme is based on the bootstrap starter theme by themekraft: http://themekraft.com/store/_tk-free-wordpress-starter-theme-based-on-twitter-bootstrap/
+Version: 1.0.0
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: gray, light, two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, sticky-post,  theme-options, threaded-comments, translation-ready
@@ -44,6 +44,10 @@ Credits:
 /* This is a small security for too long strings titles */
 body {
 	word-wrap: break-word;
+    background-color: #F1F1F1;
+    font-family: 'Open Sans', sans-serif;  
+//    padding-top: 70px;
+
 }
 
 /* Alignment */
@@ -179,7 +183,7 @@ display: block;
 /* Here some needed widget styles
  * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
 .widget { margin-bottom: 2em; }
-.widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
+.widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 4px; }
 
 /* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
  * Note: you can change the whole appearance of the search_form() function in our searchform.php */
@@ -192,7 +196,10 @@ display: block;
 
 /* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!
  * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
- .comment .children { margin-left: 1.5em; }
+ .comment .children { 
+    margin-left: 0;
+    padding-left: 8px;
+}
 
 /**
 * Some WP Theme Repository requirements
@@ -257,3 +264,327 @@ display: block;
 */
 
 /* Hey, if you don't need my comments anymore, just delete me! :)  */
+
+/* Begin of customization by Finn Christiansen */
+
+.site-header {
+    margin-bottom: 0;
+}
+
+header#masthead {
+    background-color: #E6AF2E;
+}
+#masthead div.container {
+    padding-bottom: 0;
+}
+
+article {
+    background-color: #FEFEFE;
+    border: 1px solid #E1E1E1;
+}
+
+article header h1 {
+    text-align: center;
+}
+
+article header h1 a:link, article header h1 a:visited, article header h1 {
+    color: #505050;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+article header h1 a:hover, article header h1 a:active{
+    color: #80611A;
+}
+
+article h2, h2.comments-title {
+    font-size: 20px;
+    color: #505050;
+    font-weight: bold;
+}
+article h3 {
+    font-size: 16px;
+    color: #505050;
+    font-weight: bold;
+}
+
+article header, article div.entry-content, footer.entry-meta {
+    margin: 16px;
+}
+
+footer.entry-meta > span{
+    display: block;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #80611A;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: #E6AF2E; 
+}
+
+
+p {
+    line-height: 23px;
+}
+
+h1.site-title a {
+    color: #505050;
+    font-weight: 600;
+}
+h1.site-title a:hover {
+    color: #505050;
+    font-weight: 600;
+}
+
+.site-branding .lead {
+    color: #505050;
+    font-weight: 600;
+}
+
+.sidebar-padder aside {
+    background-color: #FEFEFE;
+    color: #505050;
+    border: 1px solid #E1E1E1;
+}
+
+.sidebar-padder aside h3.widget-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #505050;
+}
+
+.sidebar-padder aside.widget-search {
+    padding: 12px;
+}
+
+div.tagcloud {
+    padding: 8px;
+}
+
+article .entry-meta {
+    color: #666666;
+    font-size: 12px;
+}
+
+footer.site-footer {
+    background-color: gray;
+    padding: 8px;
+}
+
+footer.site-footer a {
+    color: #FFFFFF;
+}
+
+form.searchform input#s:focus {
+    border:1px solid #ddd;
+    outline: none;
+}    
+
+
+input, textarea {
+    padding: 10px;
+    border-radius: 0px;
+    background:#FFF;
+    -webkit-box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
+    -moz-box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
+    box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
+    border:1px solid #AAAAAA;
+    margin: 12px;
+}
+
+input.search-field{
+    padding: 10px;
+    border-radius: 0px;
+    background:#FFF;
+    -webkit-box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
+    -moz-box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
+    box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
+    border:1px solid #eee;
+    margin: 12px;
+}
+
+/* Navbar links */
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #E6AF2E;
+    text-decoration: none;
+}
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #E6AF2E;
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #505050;
+    color: #FFFFFF;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.navbar > .container .navbar-brand:hover, .navbar > .container-fluid .navbar-brand:hover{
+    color: #FFFFFF;
+}
+
+.navbar .container {
+    padding: 0px;
+
+}
+
+.navbar-default {
+    border: 0;
+    color: #FFFFFF;
+
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #505050;
+}
+
+
+nav.site-navigation {
+    background-color: #505050;
+}
+
+.site-navigation-inner {
+    padding: 0;
+}
+
+nav.site-navigation {
+    margin-bottom: 32px;
+}
+
+nav.site-navigation div.container {
+    padding-bottom: 0;
+}
+
+/* Navbar Toggle */
+
+.navbar-default .navbar-toggle {
+    border-color: #E6AF2E;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #E6AF2E;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #404040;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #E6AF2E;
+}
+
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
+}
+
+
+.btn a:link, .btn-primary a:visited, .btn, .btn-primary {
+    color: #FFFFFF !important;
+}
+
+/* Comments */
+
+ol.comment-list {
+    background-color: #FEFEFE;
+    border: 1px solid #E1E1E1;
+}
+
+.comment-list .panel-footer {
+    background-color: transparent;
+    border: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.comment-list .panel-default {
+    border: none;
+    box-shadow: none;
+}
+
+.comment-body .panel-heading {
+    background-color: transparent;
+}
+
+.comment-list article {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #909090;
+}
+
+.comment-list article .panel-heading {
+    padding: 5px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+}
+
+.comment-list article .panel-heading img{
+    margin-right: 5px;
+}
+
+
+.comment-list ul, .comment-list li, .comment-list ol {
+    list-style-type: unset !important;
+}
+
+/* Display site title smaller on small screens */
+@media screen and (max-width: 480px) {
+    h1.site-title {
+        font-size:18px;
+    }
+
+    .site-branding .lead {
+        font-size:14px;
+    }
+
+    div .main-content-inner, div .sidebar {
+        padding: 2px;
+    }
+
+}
+
+
+/* CF7 your name field */
+.wpcf7-form-control-wrap.your-name input {
+  max-width: 400px;
+  width: 100%;
+}
+/* CF7 your email field */
+.wpcf7-form-control-wrap.your-email input {
+  max-width: 400px;
+  width: 100%;
+}
+/* CF7 your subject field */
+.wpcf7-form-control-wrap.your-subject input {
+  max-width: 400px;
+  width: 100%;
+}
+/* CF7 your message field */
+.wpcf7-form-control-wrap.your-message textarea {
+  max-width: 400px;
+  width: 100%;
+}
+/* CF7 your captcha field */
+.wpcf7-form-control-wrap.captcha-350 input {
+  max-width: 400px;
+  width: 100%;
+}

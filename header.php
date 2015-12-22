@@ -63,24 +63,33 @@
 							<span class="icon-bar"></span>
 						</button>
 	
-						<!-- Your site title as branding in the menu -->
-						<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					</div>
+                    </div>
 
+                    <div class="collapse navbar-collapse">
 					<!-- The WordPress Menu goes here -->
 					<?php wp_nav_menu(
 						array(
 							'theme_location' 	=> 'primary',
-							'depth'             => 2,
-							'container'         => 'div',
-							'container_class'   => 'collapse navbar-collapse',
+							'depth'             => 1,
+							//'container'         => 'div',
+							//'container_class'   => 'collapse navbar-collapse',
 							'menu_class' 		=> 'nav navbar-nav',
 							'fallback_cb' 		=> 'wp_bootstrap_navwalker::fallback',
 							'menu_id'			=> 'main-menu',
 							'walker' 			=> new wp_bootstrap_navwalker()
 						)
-					); ?>
+                    ); ?>
 
+					<?php wp_nav_menu(
+						array(
+							'container'         => '',
+							'theme_location' 	=> 'secondary',
+							'menu_class' 		=> 'nav navbar-nav navbar-right',
+							'menu_id'			=> 'main-menu-right',
+							'walker' 			=> new wp_bootstrap_navwalker()
+						)
+                    ); ?>
+                    </div>
 				</div><!-- .navbar -->
 			</div>
 		</div>

@@ -1,9 +1,9 @@
-Theme Name: _tk
-Theme URI: http://themekraft.com/store/_tk-free-wordpress-starter-theme-based-on-twitter-bootstrap/
-Author: ThemeKraft
-Author URI: http://themekraft.com/
-Description: Hi, I am the ultra minimal starter theme _tk, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress. You can find me on GitHub. Fork me! I'm waiting for you ;)
-Version: 1.1.9
+Theme Name: _tkFC
+Theme URI: https://github.com/Finn10111/_tkfc
+Author: Finn Christiansen
+Author URI: https://www.finnchristiansen.de
+Description: This theme is based on the bootstrap starter theme by themekraft: http://themekraft.com/store/_tk-free-wordpress-starter-theme-based-on-twitter-bootstrap/
+Version: 1.0.0
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: gray, light, two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, sticky-post,  theme-options, threaded-comments, translation-ready

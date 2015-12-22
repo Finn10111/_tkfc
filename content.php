@@ -14,6 +14,10 @@
 // for example content-single.php for the post single view. ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <div class="entry-content-thumbnail">
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
+        </div>
+
 	<header>
 		<h1 class="page-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
@@ -65,7 +69,7 @@
 
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', '_tk' ), __( '1 Comment', '_tk' ), __( '% Comments', '_tk' ) ); ?></span>
-		<?php endif; ?>
+        <?php endif; ?>
 
 		<?php edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
