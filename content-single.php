@@ -11,7 +11,7 @@
 	<header>
 		<h1 class="page-title"><?php the_title(); ?></h1>
 
-		<div class="entry-meta">
+		<div class="entry-meta"><i class="fa fa-calendar"></i> 
 			<?php _tk_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
@@ -53,7 +53,7 @@
 			} // end check for categories on this blog
 
 			printf(
-				$meta_text,
+				'<i class="fa fa-tag"></i> ' . $meta_text,
 				$category_list,
 				$tag_list,
 				get_permalink(),
@@ -61,6 +61,6 @@
 			);
 		?>
 
-		<?php edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->

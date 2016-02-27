@@ -22,7 +22,7 @@
 		<h1 class="page-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
+		<div class="entry-meta"><i class="fa fa-calendar"></i> 
 			<?php _tk_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -61,16 +61,16 @@
 				$tags_list = get_the_tag_list( '', __( ', ', '_tk' ) );
 				if ( $tags_list ) :
 			?>
-			<span class="tags-links">
+			<span class="tags-links"><i class="fa fa-tag"></i> 
 				<?php printf( __( 'Tagged %1$s', '_tk' ), $tags_list ); ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', '_tk' ), __( '1 Comment', '_tk' ), __( '% Comments', '_tk' ) ); ?></span>
+        <span class="comments-link"><i class="fa fa-comment"></i> <?php comments_popup_link( __( 'Leave a comment', '_tk' ), __( '1 Comment', '_tk' ), __( '% Comments', '_tk' ) ); ?></span>
         <?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
